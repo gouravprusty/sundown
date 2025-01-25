@@ -3,6 +3,21 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+let loader = document.querySelector("#loader")
+setTimeout(function(){
+    loader.style.top = "-100%"
+},4000)
+
+let menuBtn = document.querySelector(".mobile_menu");
+menuBtn.addEventListener("click", () => {
+    menu.style.bottom = "0";
+})
+let close = document.querySelector(".menu_close");
+let menu = document.querySelector(".menu_container");
+close.addEventListener("click", () => {
+    menu.style.bottom = "-100%";
+})
+
 let elements = document.querySelectorAll(".page3_element");
 let fixed_image = document.querySelector(".page3_fixed_image");
 elements.forEach((item) => {

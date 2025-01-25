@@ -69,7 +69,82 @@ ol {
     font-display: swap;
 }
 
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: all ease 1s;
+    z-index: 1111;
+}
+#loader h1{
+    position: absolute;
+    color: transparent;
+    background: linear-gradient(to right,#FF9831,#FE330A);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 7vw;
+    opacity: 0;
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes loader {
+    0%{opacity: 0;}
+    10%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}
 
+.menu_container{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #efeae3;
+    z-index: 99;
+    transition: all 0.5s ease-in-out;
+}
+.mobile_menu_links{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2vh;
+    padding: 4vh 3vw;
+}
+.mobile_menu_links a{
+    width: 100%;
+    font-size: 6vw;
+    font-weight: 500;
+    text-align: center;
+}
+.menu_close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #878787;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
 .page1{
     min-height: 100vh;
     width: 100%;
@@ -612,4 +687,18 @@ ol {
 .footer_social h5{
     font-size: 1.1vw;
     font-weight: 500;
+}
+
+@media only screen and (max-width:600px){
+    #loader h1 {font-size: 5vh;}
+    .page1 {overflow: hidden;height: 100%;padding: 2vw 2vw;}
+    .nav_bar{padding: 2.5vw 2vw;}
+    .nav_links{display: none;}
+    .mobile_menu{display: block; margin-right: 2vw;border: 1px solid #ab9e9a74;border-radius: 50px;color: #282626fb;font-weight: 500;padding: 3vw 6vw;line-height: 1.25;}
+    .center{height: auto;flex-direction: column-reverse;padding-bottom: 5vh;}
+    .center_right{padding-right: 4vw;padding-top: 8vw;}
+    .center_right h1{font-size: 16vw;line-height: 15vw;}
+    .center_left h3{width: 73%;font-size: 5vw; line-height: 1.2;}
+    .hero_shape{width: 59vw;height: 66vw;top: 51vh;}
+    .center_video{margin-top: 4vh;width: 92%;object-fit: cover;object-position: center;height: 60vh;margin-left: 4%;border-radius: 12px;}
 }
