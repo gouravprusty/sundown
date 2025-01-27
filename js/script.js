@@ -10,12 +10,12 @@ setTimeout(function(){
 
 let menuBtn = document.querySelector(".mobile_menu");
 menuBtn.addEventListener("click", () => {
-    menu.style.bottom = "0";
+    menu.style.top = "0";
 })
 let close = document.querySelector(".menu_close");
 let menu = document.querySelector(".menu_container");
 close.addEventListener("click", () => {
-    menu.style.bottom = "-100%";
+    menu.style.top = "-100%";
 })
 
 let elements = document.querySelectorAll(".page3_element");
