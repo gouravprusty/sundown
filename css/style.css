@@ -69,6 +69,9 @@ ol {
     font-display: swap;
 }
 
+.container{
+    background-color: #efeae3;
+}
 #loader{
     height: 100%;
     width: 100%;
